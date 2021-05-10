@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Image Uploading</title>
+</head>
+
+<body>
+	<h1>To Upload Image on mongoDB</h1>
+	<hr>
+	<div>
+		<form action="/form" method="POST" enctype="multipart/form-data">
+			<div>
+				<label for="name">Book Name</label>
+				<input type="text" id="name" placeholder=""
+					value="" name="name" required>
+			</div>
+
+			<div>
+				<label for="Orignal Price">Orignal Price</label>
+				<input type="text" id="orignalPrice" placeholder=""
+          value="" name="orignalPrice" required>
+			</div>
+
+			<div>
+				<label for="discount">Discount of </label>
+<select id="discount" name="amount">
+  <option value="40">40%</option>
+  <option value="50">50%</option>
+  <option value="60">60%</option>
+  <option value="70">70%</option>
+	<option value="80">80%</option>
+	<option value="90">90%</option>
+	<option value="100">100%</option>
+</select>
+			</div>
+
+			<div>
+				<label for="author name">Author Name </label>
+				<input type="text" id="" placeholder=""
+					value="" name="authorName" required>
+			</div>
+
+			<div>
+				<label for="desc">Book description</label>
+				<textarea name="desc" rows="8" cols="80"></textarea>
+				<input type="submit">
+			</div>
+
+
+			<label for="tags">Choose a category:</label>
+			  <select id="tags" name="tags">
+			    <option value="Action and Adventure">Action and Adventure</option>
+			    <option value="Classics">Classics</option>
+			    <option value="Literary Fiction">Literary Fiction</option>
+			    <option value="Science Fiction (Sci-Fi)">Science Fiction (Sci-Fi)</option>
+					<option value="Biographies and Autobiographies">Biographies and Autobiographies</option>
+					<option value="Poetry">Poetry</option>
+			  </select>
+
+
+
+			<div>
+				<label for="image">Upload Image</label>
+				<input type="file" id="image"
+					name="image" value="" required>
+			</div>
+			<div>
+				<button type="submit">Submit</button>
+			</div>
+		</form>
+	</div>
+
+	<hr>
+
+
+</body>
+
+</html>

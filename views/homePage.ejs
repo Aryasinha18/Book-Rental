@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+}
+
+.price {
+  color: grey;
+  font-size: 22px;
+}
+
+.card button {
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+.card button:hover {
+  opacity: 0.7;
+}
+</style>
+</head>
+<body>
+
+<form  action="/homePage" method="GET" class = "form-inline">
+  <div class="form-group">
+    <input type="text" name="search" value="" class= "form-control">
+    <input type="submit" name="" value="search" class="btn btn-default">
+
+  </div>
+
+</form>
+
+<a href="/form"> to add a book.</a>
+
+  <h2 style="text-align:center">Product Card</h2>
+
+  <div class="card">
+    	<% items.forEach(function(image) { %>
+    <img class="w-100 h-100" src="data:image/<%=image.img.contentType%>;base64,
+     <%=image.img.data.toString('base64')%>" alt="Card image cap" style="width:100%">
+    <h1><%= image.name %></h1>
+    <h3><%= image.authorName %></h3>
+    <p class="price"> &#8377;<%= image.price %></p>
+    <p><%= image.description %> </p>
+    <p><%= image.category %> </p>
+    <form class="" action="/cart" method="post">
+      <input type="hidden" name="bookId" value="<%= image %>">
+      <button type="submit" name="button">Add to cart</button>
+    </form>
+    	<% }) %>
+  </div>
+
+
+</body>
+
+</html>

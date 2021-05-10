@@ -1,0 +1,28 @@
+
+  <section class="about-cards-section">
+  <div class="container">
+    <div class="row">
+    		<% items.forEach(function(image) { %>
+
+          <div class="col-sm-4 card-wrapper">
+            <div class="card border-0">
+              <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image">
+                <img class="w-100 h-100" src="data:image/<%=image.img.contentType%>;base64,
+                 <%=image.img.data.toString('base64')%>" alt="Card image cap">
+              </div>
+              <div>
+                <div class="card-body text-center mt-4">
+                  <h3 class=" card-title"><%= image.name %></h3>
+                  <p class="card-text"> <%= image.desc %> </p>
+
+                </div>
+      				</div>
+      			</div>
+      		</div>
+      		<% }) %>
+
+
+
+    </div>
+    </div>
+  </section>
